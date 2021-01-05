@@ -6,96 +6,123 @@ export class WelcomePage extends Component
     render()
     {
         return(
-            <SafeAreaView>
-                <Text style = {{justifyContent:'center',fontSize:20,alignSelf:'center',margin:20}}>Welcome Screen</Text>
-                <View style={styles.container}>
-                    <View style = {styles.inputfieldscontainer}>
-                        <View style = {styles.inputfieldsstyle}>
-                            <Text style = {styles.textstyles}>Username</Text>
-                            <TextInput style = {styles.textinputstyles}></TextInput>
-                        </View>
-                        <View style = {styles.inputfieldsstyle}>
-                            <Text style = {styles.textstyles}>Password</Text>
-                            <TextInput style = {styles.textinputstyles}></TextInput>
-                        </View>
+            <SafeAreaView style = {styles.maincontainerStyle}>
+                <View style = {styles.containerStyle}>
+                    {/* <Text style = {styles.textStyle}>NeoSTORE</Text> */}
+                    <Image style = {styles.logoimageStyle} source = {{uri : 'https://cdn.pixabay.com/photo/2016/08/25/07/30/red-1618916__340.png'}}></Image>
+                    <View style = {styles.textinputcontainerStyle}>
+                    <Image style = {styles.imageStyle} source = {require('./Resources/user.png')}></Image>
+                        <TextInput style = {styles.textinputStyle} placeholder = 'Username' placeholderTextColor = 'white'></TextInput>
                     </View>
-                
-                <TouchableOpacity style={{alignSelf:'flex-end',marginRight:20}}>
-                    <Text style={{alignSelf:'center',
-                    justifyContent:'center',
-                    color:'black',
-                    marginTop: 10,
-                    fontSize: 15}}>Forgot Password ?</Text>
-                </TouchableOpacity>
-                
-                <View style={{flexDirection:'row',alignItems:'center'}}>
-                <TouchableOpacity
-                    activeOpacity={0.8}
-                    style={styles.appButtonContainer}>
-                    <Text >LOGIN</Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity
-                    activeOpacity={0.8}
-                    style={styles.appButtonContainer}>
-                    <Text >SIGNUP</Text>
-                </TouchableOpacity>
-                </View>
+                    <View style = {styles.textinputcontainerStyle}>
+                    <Image style = {styles.imageStyle} source = {{uri : 'https://www.iconsdb.com/icons/preview/white/padlock-3-xxl.png'}}></Image>
+                        <TextInput style = {styles.textinputStyle}  placeholder = 'Password' placeholderTextColor = 'white'></TextInput>
+                    </View>
+                    <TouchableOpacity>
+                        <Text style={{alignSelf:'flex-end', alignItems :'center',
+                        justifyContent:'center',
+                        color:'#e91b1a',
+                        marginTop: 10,
+                        marginRight : 20,
+                        fontWeight : 'bold',
+                        fontSize: 15}}>Forgot Password ?</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style = {styles.buttonStyle}>
+                    <Text style = {styles.buttontextStyle}>LOGIN</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity>
+                        <Text style={{alignSelf:'flex-end', alignItems :'center',marginBottom : 10,
+                        justifyContent:'center',
+                        color:'#e91b1a',
+                        marginTop: 10,
+                        marginRight : 20,
+                        fontWeight : 'bold',
+                        fontSize: 15}}>Don't have an account? Sign Up Now !!!</Text>
+                    </TouchableOpacity>
                 </View>
             </SafeAreaView>
-        );
+        )
     }
 }
 
-const styles = StyleSheet.create({
-
-    container : {
-        justifyContent : 'flex-start',
-        alignItems:'center',
-        height:'100%',
-        padding:10,
-    },
-    textstyles : {
-        color : 'black',
-        fontSize : 15,
-        alignSelf:'flex-start',
-        padding : 5
-    },
-    textinputstyles : {
-        color : 'black',
-        fontSize : 15,
-        alignSelf:'flex-start',
-        borderWidth : 1,
-        borderColor : 'black',
-        marginLeft: 10,
-        flex : 3,
-        padding : 5
-    },
-    inputfieldscontainer : {
-        borderStyle : 'solid',
-        borderColor : 'black',
-        borderWidth : 1,
-        padding : 10,
-        width : '90%',
-    },
-    inputfieldsstyle : {
-        fontSize : 15,
-        justifyContent: 'flex-start',
-        alignItems: 'flex-start',
-        flexDirection : 'row',
-        margin : 10,
-    },
-    appButtonContainer: {
-        elevation: 1,
-        borderColor: 'black',
-        borderRadius:5,
-        borderWidth: 1,
-        marginTop:30,
-        alignSelf:'center',
-        height:'30%',
-        width:'35%',
-        marginRight:10,
-        alignItems:'center',
-        justifyContent:'center',
-    },
-});
+const styles = StyleSheet.create(
+    {
+        maincontainerStyle : {
+            backgroundColor :'white',
+            padding : 20,
+            height : '100%',
+            width : '100%'
+        },
+        containerStyle : {
+            padding : 20,
+        },
+        textStyle : {
+            color : 'white',
+            fontStyle : 'normal',
+            fontWeight : 'bold',
+            fontSize : 50,
+            justifyContent : 'center',
+            alignSelf : 'center',
+            alignItems : 'center'
+        },
+        textinputStyle : {
+            flex :1,
+            color : 'white',
+            backgroundColor : '#e91b1a',
+            borderColor :'white',
+            borderRadius : 5,
+            fontSize : 15,
+            fontWeight : 'bold'
+        },
+        buttonStyle : {
+            elevation : 20,
+            backgroundColor : '#e91b1a',
+            color :'white',
+            borderRadius : 40,
+            fontSize : 58,
+            marginTop : 120,
+            padding : 10,
+            margin : 10
+        },
+        textinputcontainerStyle : {
+            elevation : 10,
+            flexDirection : 'row',
+            borderColor :'white',
+            padding : 10,
+            borderRadius : 40,
+            borderWidth : 2,
+            justifyContent : 'center',
+            flexDirection : 'row',
+            backgroundColor : '#e91b1a',
+            margin : 10
+        },
+        buttontextStyle : {
+            color : 'white',
+            backgroundColor : '#e91b1a',
+            fontStyle : 'normal',
+            fontWeight : 'bold',
+            fontSize : 15,
+            justifyContent : 'center',
+            alignSelf : 'center',
+            padding : 10
+        },
+        imageStyle: {
+            padding: 10,
+            margin: 10,
+            marginBottom : 5,
+            height: 25,
+            width: 25,
+            resizeMode: 'stretch',
+            alignItems : 'center'
+          },
+          logoimageStyle: {
+            height: 180,
+            width: 180,
+            margin : 10,
+            resizeMode: 'center',
+            alignItems : 'center',
+            alignSelf : 'center',
+            justifyContent : 'center'
+          },
+    }
+)
