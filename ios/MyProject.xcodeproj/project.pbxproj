@@ -18,6 +18,7 @@
 		2DCD954D1E0B4F2C00145EB5 /* MyProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* MyProjectTests.m */; };
 		499556CE3F463486B9DEE9AB /* libPods-MyProject-MyProjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DDAB2F1AC169A1421090156 /* libPods-MyProject-MyProjectTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		841ED26C25A5684F002542E2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841ED26B25A5684E002542E2 /* MapKit.framework */; };
 		8B1B4BB7DB91C5BA81F7196D /* libPods-MyProject-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62B363E7B30AA09392E166D6 /* libPods-MyProject-tvOS.a */; };
 		97899A13E06C4D32A0E91B59 /* libPods-MyProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D693D04267421783A67B20EB /* libPods-MyProject.a */; };
 /* End PBXBuildFile section */
@@ -61,6 +62,7 @@
 		791C1E4BEC02455750F327A4 /* Pods-MyProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyProject.release.xcconfig"; path = "Target Support Files/Pods-MyProject/Pods-MyProject.release.xcconfig"; sourceTree = "<group>"; };
 		7D393BB51E837011FE489F77 /* Pods-MyProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyProject.debug.xcconfig"; path = "Target Support Files/Pods-MyProject/Pods-MyProject.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = MyProject/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		841ED26B25A5684E002542E2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8B47579C9D7C2E9965106B47 /* Pods-MyProject-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyProject-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-MyProject-tvOS/Pods-MyProject-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		C108A9559E30FEE2DC9D2C25 /* Pods-MyProject-MyProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyProject-MyProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-MyProject-MyProjectTests/Pods-MyProject-MyProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C425A1CE0765CA4357EF59B0 /* Pods-MyProject-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyProject-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-MyProject-tvOSTests/Pods-MyProject-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				841ED26C25A5684F002542E2 /* MapKit.framework in Frameworks */,
 				97899A13E06C4D32A0E91B59 /* libPods-MyProject.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +142,7 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				841ED26B25A5684E002542E2 /* MapKit.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
 				D693D04267421783A67B20EB /* libPods-MyProject.a */,
@@ -194,7 +198,6 @@
 				C425A1CE0765CA4357EF59B0 /* Pods-MyProject-tvOSTests.debug.xcconfig */,
 				3B040D9EA208CA7EB4C0F113 /* Pods-MyProject-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};

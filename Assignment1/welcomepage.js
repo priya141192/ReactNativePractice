@@ -9,7 +9,7 @@ export class WelcomePage extends Component
             <SafeAreaView style = {styles.maincontainerStyle}>
                 <View style = {styles.containerStyle}>
                     {/* <Text style = {styles.textStyle}>NeoSTORE</Text> */}
-                    <Image style = {styles.logoimageStyle} source = {{uri : 'https://cdn.pixabay.com/photo/2016/08/25/07/30/red-1618916__340.png'}}></Image>
+                    <Image style = {styles.logoimageStyle} source = {{uri : 'https://cdn.pixabay.com/photo/2018/07/31/00/20/canada-3573898__340.png'}}></Image>
                     <View style = {styles.textinputcontainerStyle}>
                     <Image style = {styles.imageStyle} source = {require('./Resources/user.png')}></Image>
                         <TextInput style = {styles.textinputStyle} placeholder = 'Username' placeholderTextColor = 'white'></TextInput>
@@ -54,7 +54,7 @@ const styles = StyleSheet.create(
             width : '100%'
         },
         containerStyle : {
-            padding : 20,
+            padding : 20
         },
         textStyle : {
             color : 'white',
@@ -116,10 +116,9 @@ const styles = StyleSheet.create(
             alignItems : 'center'
           },
           logoimageStyle: {
-            height: 180,
-            width: 180,
-            margin : 10,
-            resizeMode: 'center',
+            height: 200,
+            width: 200,
+            resizeMode: 'stretch',
             alignItems : 'center',
             alignSelf : 'center',
             justifyContent : 'center'

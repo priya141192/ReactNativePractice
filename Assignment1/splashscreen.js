@@ -7,7 +7,7 @@ export class SplashScreen extends Component
     {
         return(
             <View style={style.viewStyles}>
-                <Image style={style.image} source={{uri : 'https://cdn.pixabay.com/photo/2016/08/25/07/30/red-1618916__340.png'}} />
+                <Image style={style.image} source={{uri : 'https://cdn.pixabay.com/photo/2018/07/31/00/20/canada-3573898__340.png'}} />
             </View>
         );
     }
@@ -15,8 +15,8 @@ export class SplashScreen extends Component
 
 const style = StyleSheet.create({
     image: {
-        height:200,
-        width:200,
+        height:400,
+        width:400,
         borderRadius : 20,
         alignSelf : 'center'
       },
