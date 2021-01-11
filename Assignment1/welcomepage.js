@@ -1,48 +1,65 @@
-import React,{ Component } from 'react';
-import { AppRegistry, View, TextInput, SafeAreaView,StyleSheet,Image,Text,TouchableOpacity } from 'react-native'; 
+import React,{ Component, useState } from 'react';
+import { AppRegistry, View, TextInput, SafeAreaView,StyleSheet,Image,Text,TouchableOpacity, Alert } from 'react-native'; 
 
-export class WelcomePage extends Component
+const WelcomePage = ({navigation}) => 
 {
-    render()
-    {
-        return(
-            <SafeAreaView style = {styles.maincontainerStyle}>
-                <View style = {styles.containerStyle}>
-                    {/* <Text style = {styles.textStyle}>NeoSTORE</Text> */}
-                    <Image style = {styles.logoimageStyle} source = {{uri : 'https://cdn.pixabay.com/photo/2018/07/31/00/20/canada-3573898__340.png'}}></Image>
-                    <View style = {styles.textinputcontainerStyle}>
-                    <Image style = {styles.imageStyle} source = {require('./Resources/user.png')}></Image>
-                        <TextInput style = {styles.textinputStyle} placeholder = 'Username' placeholderTextColor = 'white'></TextInput>
-                    </View>
-                    <View style = {styles.textinputcontainerStyle}>
-                    <Image style = {styles.imageStyle} source = {{uri : 'https://www.iconsdb.com/icons/preview/white/padlock-3-xxl.png'}}></Image>
-                        <TextInput style = {styles.textinputStyle}  placeholder = 'Password' placeholderTextColor = 'white'></TextInput>
-                    </View>
-                    <TouchableOpacity>
-                        <Text style={{alignSelf:'flex-end', alignItems :'center',
-                        justifyContent:'center',
-                        color:'#e91b1a',
-                        marginTop: 10,
-                        marginRight : 20,
-                        fontWeight : 'bold',
-                        fontSize: 15}}>Forgot Password ?</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style = {styles.buttonStyle}>
-                    <Text style = {styles.buttontextStyle}>LOGIN</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity>
-                        <Text style={{alignSelf:'flex-end', alignItems :'center',marginBottom : 10,
-                        justifyContent:'center',
-                        color:'#e91b1a',
-                        marginTop: 10,
-                        marginRight : 20,
-                        fontWeight : 'bold',
-                        fontSize: 15}}>Don't have an account? Sign Up Now !!!</Text>
-                    </TouchableOpacity>
+    let [UserName,setUserName] = useState('');
+    let [Password,setPassword] = useState('');
+
+    let loginUser = () => {
+        console.log(UserName, Password);
+        if(!UserName){
+            Alert("Please enter username");
+            return;
+        }
+        if(!Password){
+            Alert("Please enter password");
+            return;
+        }
+        
+        // Alert.alert("Success","Successfully logged in",[{
+        //     text : 'Ok',
+        //     onPress : () => navigation.navigate('dashboardpage')
+        // }])
+    };
+
+
+    return(
+        <SafeAreaView style = {styles.maincontainerStyle}>
+            <View style = {styles.containerStyle}>
+                <Image style = {styles.logoimageStyle} source = {{uri : 'https://cdn.pixabay.com/photo/2018/07/31/00/20/canada-3573898__340.png'}}></Image>
+                <View style = {styles.textinputcontainerStyle}>
+                <Image style = {styles.imageStyle} source = {require('./Resources/user.png')}></Image>
+                    <TextInput style = {styles.textinputStyle} onChangeText = {(UserName) => setUserName(UserName)} placeholder = 'Username' placeholderTextColor = 'white'></TextInput>
                 </View>
-            </SafeAreaView>
-        )
-    }
+                <View style = {styles.textinputcontainerStyle}>
+                <Image style = {styles.imageStyle} source = {{uri : 'https://www.iconsdb.com/icons/preview/white/padlock-3-xxl.png'}}></Image>
+                    <TextInput style = {styles.textinputStyle} secureTextEntry = {true} onChangeText = {(Password) => setPassword(Password)}  placeholder = 'Password' placeholderTextColor = 'white'></TextInput>
+                </View>
+                <TouchableOpacity>
+                    <Text style={{alignSelf:'flex-end', alignItems :'center',
+                    justifyContent:'center',
+                    color:'#e91b1a',
+                    marginTop: 10,
+                    marginRight : 20,
+                    fontWeight : 'bold',
+                    fontSize: 15}}>Forgot Password ?</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style = {styles.buttonStyle} activeOpacity = {0.8} onPress = {this.loginUser}>
+                <Text style = {styles.buttontextStyle}>LOGIN</Text>
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <Text style={{alignSelf:'flex-end', alignItems :'center',marginBottom : 10,
+                    justifyContent:'center',
+                    color:'#e91b1a',
+                    marginTop: 10,
+                    marginRight : 20,
+                    fontWeight : 'bold',
+                    fontSize: 15}}>Don't have an account? Sign Up Now !!!</Text>
+                </TouchableOpacity>
+            </View>
+        </SafeAreaView>
+    )
 }
 
 const styles = StyleSheet.create(
@@ -125,3 +142,5 @@ const styles = StyleSheet.create(
           },
     }
 )
+
+export default WelcomePage;

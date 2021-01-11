@@ -1,94 +1,91 @@
 import React,{ Component } from 'react';
 import { AppRegistry, View, TextInput, SafeAreaView,StyleSheet,Image,Text,TouchableOpacity,Button } from 'react-native'; 
 
-export class DashboardPage extends Component
+const DashboardPage = ({navigation}) => 
 {
-    render()
-    {
-        return(
-            <SafeAreaView>
-                <View style = {{height : '35%'}}>
-                {/* <Text style={styles.textstyles}>DASHBOARD</Text> */}
-                <Image style = {styles.imageStyle} source = {{uri : 'https://cdn.pixabay.com/photo/2017/12/28/15/06/background-3045402_960_720.png'}}></Image>
+    return(
+        <SafeAreaView>
+            <View style = {{height : '35%'}}>
+            {/* <Text style={styles.textstyles}>DASHBOARD</Text> */}
+            <Image style = {styles.imageStyle} source = {{uri : 'https://cdn.pixabay.com/photo/2017/12/28/15/06/background-3045402_960_720.png'}}></Image>
+            </View>
+           <View style={styles.firstcontainer}>
+                <View style={styles.dashboardcontainer}>
+                    <TouchableOpacity
+                        activeOpacity={0.8}
+                        style={styles.dashboardButtonContainer}>
+                        <Text style={{alignSelf:'center', alignItems :'center',
+                    justifyContent:'center',
+                    color:'white',
+                    fontWeight : 'bold',
+                    fontSize: 15}}>Profile</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity
+                        activeOpacity={0.8}
+                        style={styles.dashboardButtonContainer}>
+                        <Text style={{alignSelf:'center', alignItems :'center',
+                    justifyContent:'center',
+                    color:'white',
+                    fontWeight : 'bold',
+                    fontSize: 15}}>My Account</Text>
+                    </TouchableOpacity>
                 </View>
-               <View style={styles.firstcontainer}>
-                    <View style={styles.dashboardcontainer}>
-                        <TouchableOpacity
-                            activeOpacity={0.8}
-                            style={styles.dashboardButtonContainer}>
-                            <Text style={{alignSelf:'center', alignItems :'center',
-                        justifyContent:'center',
-                        color:'white',
-                        fontWeight : 'bold',
-                        fontSize: 15}}>Profile</Text>
-                        </TouchableOpacity>
+                <View style={styles.dashboardcontainer}>
+                    <TouchableOpacity
+                        activeOpacity={0.8}
+                        style={styles.dashboardButtonContainer}>
+                        <Text style={{alignSelf:'center', alignItems :'center',
+                    justifyContent:'center',
+                    color:'white',
+                    fontWeight : 'bold',
+                    fontSize: 15}}>My Orders</Text>
+                    </TouchableOpacity>
 
-                        <TouchableOpacity
-                            activeOpacity={0.8}
-                            style={styles.dashboardButtonContainer}>
-                            <Text style={{alignSelf:'center', alignItems :'center',
-                        justifyContent:'center',
-                        color:'white',
-                        fontWeight : 'bold',
-                        fontSize: 15}}>My Account</Text>
-                        </TouchableOpacity>
-                    </View>
-                    <View style={styles.dashboardcontainer}>
-                        <TouchableOpacity
-                            activeOpacity={0.8}
-                            style={styles.dashboardButtonContainer}>
-                            <Text style={{alignSelf:'center', alignItems :'center',
-                        justifyContent:'center',
-                        color:'white',
-                        fontWeight : 'bold',
-                        fontSize: 15}}>My Orders</Text>
-                        </TouchableOpacity>
+                    <TouchableOpacity
+                        activeOpacity={0.8}
+                        style={styles.dashboardButtonContainer}>
+                        <Text style={{alignSelf:'center', alignItems :'center',
+                    justifyContent:'center',
+                    color:'white',
+                    fontWeight : 'bold',
+                    fontSize: 15}}>Profile</Text>
+                    </TouchableOpacity>
+                </View>
+           </View>
+           <View style={styles.secondcontainer}>
+            <TouchableOpacity
+                activeOpacity={0.8}
+                style={styles.appButtonContainer}>
+                <Text style={{alignSelf:'center', alignItems :'center',
+                    justifyContent:'center',
+                    color:'#e91b1a',
+                    fontWeight : 'bold',
+                    fontSize: 15}}>Home</Text>
+            </TouchableOpacity>
 
-                        <TouchableOpacity
-                            activeOpacity={0.8}
-                            style={styles.dashboardButtonContainer}>
-                            <Text style={{alignSelf:'center', alignItems :'center',
-                        justifyContent:'center',
-                        color:'white',
-                        fontWeight : 'bold',
-                        fontSize: 15}}>Profile</Text>
-                        </TouchableOpacity>
-                    </View>
-               </View>
-               <View style={styles.secondcontainer}>
-                <TouchableOpacity
-                    activeOpacity={0.8}
-                    style={styles.appButtonContainer}>
-                    <Text style={{alignSelf:'center', alignItems :'center',
-                        justifyContent:'center',
-                        color:'#e91b1a',
-                        fontWeight : 'bold',
-                        fontSize: 15}}>Home</Text>
-                </TouchableOpacity>
+            <TouchableOpacity
+                activeOpacity={0.8}
+                style={styles.appButtonContainer}>
+                <Text style={{alignSelf:'center', alignItems :'center',
+                    justifyContent:'center',
+                    color:'#e91b1a',
+                    fontWeight : 'bold',
+                    fontSize: 15}}>About Us</Text>
+            </TouchableOpacity>
 
-                <TouchableOpacity
-                    activeOpacity={0.8}
-                    style={styles.appButtonContainer}>
-                    <Text style={{alignSelf:'center', alignItems :'center',
-                        justifyContent:'center',
-                        color:'#e91b1a',
-                        fontWeight : 'bold',
-                        fontSize: 15}}>About Us</Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity
-                    activeOpacity={0.8}
-                    style={styles.appButtonContainer}>
-                    <Text style={{alignSelf:'center', alignItems :'center',
-                        justifyContent:'center',
-                        color:'#e91b1a',
-                        fontWeight : 'bold',
-                        fontSize: 15}}>Settings</Text>
-                </TouchableOpacity>
-               </View>
-            </SafeAreaView>
-        );
-    }
+            <TouchableOpacity
+                activeOpacity={0.8}
+                style={styles.appButtonContainer}>
+                <Text style={{alignSelf:'center', alignItems :'center',
+                    justifyContent:'center',
+                    color:'#e91b1a',
+                    fontWeight : 'bold',
+                    fontSize: 15}}>Settings</Text>
+            </TouchableOpacity>
+           </View>
+        </SafeAreaView>
+    );
 }
 
 const styles = StyleSheet.create({
@@ -161,3 +158,5 @@ const styles = StyleSheet.create({
         justifyContent : 'center'
       },
 });
+
+export default DashboardPage;

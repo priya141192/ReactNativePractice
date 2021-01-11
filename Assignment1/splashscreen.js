@@ -1,16 +1,17 @@
-import React,{ Component } from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import React,{ Component,useEffect } from 'react';
 import { AppRegistry, View, TextInput, SafeAreaView,StyleSheet,Image } from 'react-native'; 
-export class SplashScreen extends Component
+const SplashScreen = ({navigation}) =>
 {
-    
-    render()
-    {
-        return(
-            <View style={style.viewStyles}>
-                <Image style={style.image} source={{uri : 'https://cdn.pixabay.com/photo/2018/07/31/00/20/canada-3573898__340.png'}} />
-            </View>
-        );
-    }
+    useEffect(() => {
+        setTimeout(() => {navigation.navigate('welcomepage')},2000);
+    });
+
+    return(
+        <View style={style.viewStyles}>
+            <Image style={style.image} source={{uri : 'https://cdn.pixabay.com/photo/2018/07/31/00/20/canada-3573898__340.png'}} />
+        </View>
+    );
 };
 
 const style = StyleSheet.create({
@@ -29,3 +30,6 @@ const style = StyleSheet.create({
           borderRadius : 10
       }
 });
+
+export default SplashScreen;
+
